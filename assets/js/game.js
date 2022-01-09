@@ -35,16 +35,16 @@ var fight = function(enemyName) {
 
     // Log a resulting message to the console so we know that it worked.
     console.log(
-        playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining. " 
+        playerName + " attacked " + enemyNames[i] + ". " + enemyNames[i] + " now has " + enemyHealth + " health remaining. " 
     );
     
 
     // check enemy's health
     if (enemyHealth <= 0) {
-        window.alert(enemyName + " has died! ");
+        window.alert(enemyNames[i] + " has died! ");
     }
      else {
-        window.alert(enemyName + " still has " + enemyHealth + " health left. ");
+        window.alert(enemyNames[i] + " still has " + enemyHealth + " health left. ");
     }
 
     // remove player's health by subtracting the amount set in the enemyAttack variable
@@ -52,7 +52,7 @@ var fight = function(enemyName) {
 
     // Log a resulting message to the console so we know that it worked.
         console.log(
-            enemyName + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining. "
+            enemyNames[i] + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining. "
     );
 
     
@@ -90,6 +90,11 @@ var fight = function(enemyName) {
 };
 
     for(var i = 0; i < enemyNames.length; i++) {
-        fight(enemyNames[i]);
+        var pickedEnemyName = enemyNames[i];
+        
+        // call fight function with enemy-robot
+        // debugger;
+        enemyHealth = 50;
+        fight(pickedEnemyName);
     
 }
