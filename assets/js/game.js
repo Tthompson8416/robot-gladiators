@@ -54,7 +54,7 @@ var fight = function(enemyName) {
 
         // leave while() loop since enemy is dead
         break;
-        }else {
+        } else {
        window.alert(enemyNames[i] + " still has " + enemyHealth + " health left. ");
 
     // remove player's health by subtracting the amount set in the enemyAttack variable
@@ -69,7 +69,6 @@ var fight = function(enemyName) {
     window.alert(playerName + " has died! ");
     // leave loop if player is dead
     break;
-
 } else {
     window.alert(playerName + " still has " + playerHealth + " health left. ");
   }
@@ -87,6 +86,14 @@ console.log(promptFight);
         playerName + " attacked " + enemyNames[i] + ". " + enemyNames[i] + " now has " + enemyHealth + " health remaining. " 
     );
 };
+
+    // function to start a new game
+    var startGame = function() {
+        // reset player stats
+        playerHealth = 100;
+        playerAttack = 10;
+        playerMoney = 10;
+    
     // fight each enemy-robot by looping over them and fighting them one at a time
     for(var i = 0; i < enemyNames.length; i++) {
         //if player is still alive, keep fighting 
@@ -112,4 +119,17 @@ console.log(promptFight);
         break;
       }
     }
+    // play again
+    startGame();
+
+    };
+
+      // after loop ends, we are either out of playerHealth or enemies to fight, so run the endGame function
+  
+
+
+    // start first game when page loads
+    startGame();
+
+    
     
