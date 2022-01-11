@@ -42,12 +42,12 @@ var fight = function(enemyName) {
     // remove enemy's health by subtracting the amount set in the playerAttack variable
     enemyHealth = enemyHealth - playerAttack;
     console.log(
-        playerName + " attacked " + enemyNames[i] + ". " + enemyNames[i] + " now has " + enemyHealth + " health remaining. " 
+        playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining. " 
     );
     
     // check enemy's health
     if (enemyHealth <= 0) {
-        window.alert(enemyNames[i] + " has died! ");
+        window.alert(enemyName + " has died! ");
         
         // award player money for winning
         playerMoney = playerMoney + 20;
@@ -55,13 +55,13 @@ var fight = function(enemyName) {
         // leave while() loop since enemy is dead
         break;
         } else {
-       window.alert(enemyNames[i] + " still has " + enemyHealth + " health left. ");
+       window.alert(enemyName + " still has " + enemyHealth + " health left. ");
 
     // remove player's health by subtracting the amount set in the enemyAttack variable
     playerHealth = playerHealth - enemyAttack;
     // Log a resulting message to the console so we know that it worked.
    console.log(
-    enemyNames[i] + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining. "
+    enemyName + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining. "
 );
 
 //check palyer's health
@@ -83,7 +83,7 @@ console.log(promptFight);
 
     // Log a resulting message to the console so we know that it worked.
     console.log(
-        playerName + " attacked " + enemyNames[i] + ". " + enemyNames[i] + " now has " + enemyHealth + " health remaining. " 
+        playerName + " attacked " + enemyName + ". " + enemyNames + " now has " + enemyHealth + " health remaining. " 
     );
 };
 
@@ -102,7 +102,7 @@ console.log(promptFight);
         window.alert("Welcome to Robot Gladiators! Round " + (i + 1));
 
         // pick new enemy to fight based on the index of the enemyNames array
-        var pickedEnemyName = enemyNames[i];
+        var pickedEnemyName = enemyNames;
         
         // reset enemyHealth before starting new fight
         enemyHealth = 50;
