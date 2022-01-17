@@ -233,17 +233,7 @@ var startGame = function () {
     };
 }
 
-// function to set name
-getPlayerName() {
-var name = "";
 
-// ******************************* 
-// ADD LOOP HERE WITH PROMPT AND CONDITION
-// *******************************
-
-console.log("Your robot's name is " + name);
-  return name;
-};
 
 
 
