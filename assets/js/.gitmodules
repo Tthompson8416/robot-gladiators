@@ -1,0 +1,6 @@
+[submodule "robot-gladiators-2023"]
+	path = robot-gladiators-2023
+	url = https://github.com/Tthompson8416/robot-gladiators-2023
+[submodule "path"]
+	path = path
+	url = https://github.com/Tthompson8416/robot-gladiators-2023
